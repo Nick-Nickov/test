@@ -1,0 +1,16 @@
+<!-- index.html -->
+{% block content %}
+  <div class="jumbotron">
+    <h1 class="display-4">Депо электротранспорта в Кирове</h1>
+    <p class="lead">В 2023 году Кировский троллейбус празднует свое 80-летие!</p>
+    <hr class="my-4">
+    <h3>Список депо:</h3>
+    <ul class="list-group">
+      {% for depo in depo_list %}
+        <li class="list-group-item"><a href="{% url 'depo_detail' depo.id %}">{{ depo.name }}</a></li>
+      {% empty %}
+        <li class="list-group-item">Нет доступных депо.</li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}

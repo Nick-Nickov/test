@@ -1,0 +1,15 @@
+{% extends 'depo/base.html' %}
+
+{% block content %}
+<h2>Троллейбусы Кирова</h2>
+<div class="trolleybuses">
+    {% for trolleybus in trolleybuses %}
+    <div class="trolleybus-card">
+        <img src="{{ trolleybus.image.url }}" alt="Фото троллейбуса {{ trolleybus.number }}">
+        <h3>Троллейбус №{{ trolleybus.number }}</h3>
+        <p>Модель: {{ trolleybus.model }}</p>
+        <p>Год выпуска: {{ trolleybus.year }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

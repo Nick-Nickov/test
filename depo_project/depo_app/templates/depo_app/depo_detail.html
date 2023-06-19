@@ -1,0 +1,8 @@
+{% extends "depo_app/base.html" %}
+
+{% block content %}
+  <h2>{{ depo.name }}</h2>
+  <p>Адрес: {{ depo.address }}</p>
+  <p>Телефон: {{ depo.phone }}</p>
+  <p>Количество транспорта: {{ depo.transport_count }}</p>
+{% endblock %}
